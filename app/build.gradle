@@ -42,5 +42,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.1.0'
     implementation 'com.google.firebase:firebase-database:20.1.0'
 
-    implementation 'com.google.firebase:firebase-auth-api-phone:19.3.1'
 }
