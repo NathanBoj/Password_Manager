@@ -8,14 +8,34 @@
     android:background="@drawable/hack">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="260dp"
-        android:layout_height="440dp"
+        android:layout_width="268dp"
+        android:layout_height="514dp"
         android:background="@drawable/roundbox"
         android:backgroundTint="#DA2EBFBE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            android:backgroundTint="#8FFFFFFF"
+            android:ems="10"
+            android:fontFamily="serif-monospace"
+            android:hint="Phone Number"
+            android:inputType="textShortMessage|none|phone"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fullName" />
 
         <EditText
             android:id="@+id/rePassword"
@@ -95,7 +115,7 @@
             android:textColorHint="#000000"
             android:textStyle="bold|italic"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fullName" />
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
 
         <Button
             android:id="@+id/registerUser"

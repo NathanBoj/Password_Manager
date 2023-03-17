@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             if(task.isSuccessful()){
                 //If user verified their email
                 if (userAuthorized.isEmailVerified()){
-                    startActivity(new Intent(MainActivity.this,HomePage.class));
+                    startActivity(new Intent(MainActivity.this,SMS.class));
                 } else {
                     Toast.makeText(MainActivity.this, "Please verify your email!", Toast.LENGTH_SHORT).show();
                 }

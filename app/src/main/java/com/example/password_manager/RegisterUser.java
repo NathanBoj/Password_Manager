@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 
 public class RegisterUser extends AppCompatActivity {
 
-    private EditText name_reg, email_reg, password_reg, rePassword;
+    private EditText name_reg, email_reg, password_reg, rePassword, phoneNumber;
     private TextView login;
 
     private FirebaseAuth mAuth;
@@ -46,6 +46,7 @@ public class RegisterUser extends AppCompatActivity {
         password_reg = findViewById(R.id.passwordRegister);
         rePassword = findViewById(R.id.rePassword);
         login = findViewById(R.id.loginLink);
+        phoneNumber = findViewById(R.id.phoneNumber);
 
         //Send user to login page
         login.setOnClickListener(view -> {
@@ -64,6 +65,7 @@ public class RegisterUser extends AppCompatActivity {
 
         String name = name_reg.getText().toString().trim();
         String email = email_reg.getText().toString().trim();
+        String phone = phoneNumber.getText().toString().trim();
         String password = password_reg.getText().toString().trim();
         String Repassword = rePassword.getText().toString().trim();
 
@@ -76,6 +78,11 @@ public class RegisterUser extends AppCompatActivity {
         if (email.isEmpty()) {
             email_reg.setError("Email is required!");
             email_reg.requestFocus();
+            return;
+        }
+        if (phone.isEmpty()) {
+            phoneNumber.setError("Phone is required!");
+            phoneNumber.requestFocus();
             return;
         }
         if (password.isEmpty()) {
@@ -120,7 +127,7 @@ public class RegisterUser extends AppCompatActivity {
                     if (task.isSuccessful()) {
 
                         //Add user attributes to realtime database
-                        User user = new User(name, email);
+                        User user = new User(name, email, phone);
 
                         FirebaseDatabase.getInstance().getReference("Users")
                                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
