@@ -2,6 +2,7 @@ package com.example.password_manager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -17,11 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView register, forgotPass;
     private EditText email_log, password_log;
-    private Button Login;
+    private Button Login, debug;
 
     private FirebaseAuth mAuth;
     public FirebaseAuth auth = FirebaseAuth.getInstance();
-    public FirebaseUser userAuthorized = auth.getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,25 @@ public class MainActivity extends AppCompatActivity {
         password_log = findViewById(R.id.passwordLogin);
         Login = findViewById(R.id.loginUser);
         forgotPass = findViewById(R.id.forgotPass);
+
+        //Remove!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        debug = findViewById(R.id.debug);
+        debug.setOnClickListener(view -> {
+            mAuth.signInWithEmailAndPassword("bojczuk.nathan@gmail.com","Abcdefg123!").addOnCompleteListener(task -> {
+                if(task.isSuccessful()){
+                    FirebaseUser userAuthorized = auth.getCurrentUser();
+                    //If user verified their email
+                    assert userAuthorized != null;
+                    if (userAuthorized.isEmailVerified()){
+                        startActivity(new Intent(MainActivity.this,SMS.class));
+                    } else {
+                        Toast.makeText(MainActivity.this, "Please verify your email!", Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Login Failed! Please try again.", Toast.LENGTH_SHORT).show();
+                }
+            });
+        });
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -53,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
     private void userLogin() {
         String email = email_log.getText().toString().trim();
@@ -84,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
             if(task.isSuccessful()){
                 //If user verified their email
+                FirebaseUser userAuthorized = auth.getCurrentUser();
                 if (userAuthorized.isEmailVerified()){
                     startActivity(new Intent(MainActivity.this,SMS.class));
                 } else {

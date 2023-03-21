@@ -45,7 +45,7 @@
             android:ems="10"
             android:fontFamily="serif-monospace"
             android:hint="SMS Code"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:lineSpacingExtra="0sp"
             android:minHeight="48dp"
             android:textAlignment="center"
