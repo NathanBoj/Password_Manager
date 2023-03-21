@@ -55,10 +55,16 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
         String title = itemsList.get(position).get_title();
         holder.titleTxt.setText(title);
+
         String pass = itemsList.get(position).get_password();
-        holder.passTxt.setText(pass);
+        String truncatedPassword = pass;
+        if (pass.length() >= 12){
+            truncatedPassword = pass.substring(0, 12) + "...";
+        }
+        holder.passTxt.setText(truncatedPassword);
 
         String key = itemsList.get(position).get_key();
         String iv = itemsList.get(position).get_iv();
@@ -83,10 +89,11 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
         });
 
         //Hide password (encrypt)
+        String finalTruncatedPassword = truncatedPassword;
         holder.unlock_button.setOnClickListener(view -> {
             holder.unlock_button.setVisibility(View.GONE);
             holder.lock_button.setVisibility(View.VISIBLE);
-            holder.passTxt.setText(pass);
+            holder.passTxt.setText(finalTruncatedPassword);
             Toast.makeText(holder.itemView.getContext(), "Successfully encrypted password", Toast.LENGTH_SHORT).show();
         });
 
