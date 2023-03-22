@@ -2,7 +2,7 @@
 Software & Computer Security Project
 
 Login Page
-![Login Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login.jpg)
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login.jpg" width=100% height=100%>
 
 Register Page
 ![Register Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/registration.jpg)
@@ -12,6 +12,9 @@ Reset Page
 
 SMS Page
 ![SMS Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/sms.jpg)
+
+Home Page
+![Home Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/home.jpg)
 
 Decrypt Page
 ![Decrypt Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/decrypt.jpg)
