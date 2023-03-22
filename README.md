@@ -2,25 +2,25 @@
 Software & Computer Security Project
 
 Login Page
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login.jpg" width=100% height=100%>
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login.jpg" width=50% height=50%>
 
 Register Page
-![Register Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/registration.jpg)
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/registration.jpg" width=50% height=50%>
 
 Reset Page
-![Reset Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/reset.jpg)
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/reset.jpg" width=50% height=50%>
 
 SMS Page
-![SMS Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/sms.jpg)
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/sms.jpg" width=50% height=50%>
 
 Home Page
-![Home Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/home.jpg)
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/home.jpg" width=50% height=50%>
 
 Decrypt Page
-![Decrypt Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/decrypt.jpg)
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/decrypt.jpg" width=50% height=50%>
 
 Create Page
-![Create Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/create.jpg)
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/create.jpg" width=50% height=50%>
 
 Updated Home Page
-![Updated Home Page](https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/create2.jpg)
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/create2.jpg" width=50% height=50%>
