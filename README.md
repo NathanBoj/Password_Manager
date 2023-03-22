@@ -1,5 +1,5 @@
 # Password_Manager
-Software & Computer Security Project
+## Software & Computer Security Project
 
 ### Login Page
 <img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login.jpg" width=20% height=20%>
