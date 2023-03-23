@@ -60,6 +60,7 @@ public class PasswordEncryption {
         return Base64.getDecoder().decode(data);
     }
 
+    //Testing the use of the defined methods above
     public static void main(String[] args) {
         try {
             String password = "AsecurePassword123!";
