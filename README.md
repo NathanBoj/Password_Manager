@@ -1,6 +1,11 @@
 # Password_Manager
 ## Software & Computer Security Project
 
+## How to install:
+Using your favourite Android device, install the APK [here.](https://github.com/NathanBoj/Password_Manager/tree/main/app/release)
+(must allow installations from uknown sources)
+
+## Functionality
 ### Login Page
 <img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login.jpg" width=20% height=20%>
 
