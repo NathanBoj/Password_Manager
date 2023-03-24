@@ -27,9 +27,9 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
 
     public recyclerAdapter(ArrayList<item> itemsList){
         this.itemsList = itemsList;
-
     }
 
+    //For each item, display the following elements
     public class MyViewHolder extends RecyclerView.ViewHolder{
         private TextView titleTxt;
         private TextView passTxt;
@@ -42,7 +42,6 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
 
             lock_button = view.findViewById(R.id.lock_button);
             unlock_button = view.findViewById(R.id.unlock_button);
-
         }
     }
 
@@ -56,6 +55,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+        //Get position of specified item
         String title = itemsList.get(position).get_title();
         holder.titleTxt.setText(title);
 
@@ -69,6 +69,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
         String key = itemsList.get(position).get_key();
         String iv = itemsList.get(position).get_iv();
 
+        //Password Object
         PasswordEncryption passwordEncryption = new PasswordEncryption();
 
         //Show password (decrypt)

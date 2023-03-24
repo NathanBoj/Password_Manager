@@ -14,6 +14,7 @@ public class PasswordEncryption {
     private static final int KEY_SIZE = 16;
     private static final int IV_SIZE = 12;
 
+    //Generating Cipher Key
     public static String generateKey() {
         SecureRandom random = new SecureRandom();
         byte[] keyBytes = new byte[KEY_SIZE];
@@ -21,6 +22,7 @@ public class PasswordEncryption {
         return Base64.getEncoder().encodeToString(keyBytes);
     }
 
+    //Generating Initialization Vector
     public static String generateIV() {
         SecureRandom random = new SecureRandom();
         byte[] ivBytes = new byte[IV_SIZE];
@@ -28,22 +30,38 @@ public class PasswordEncryption {
         return Base64.getEncoder().encodeToString(ivBytes);
     }
 
+    //Encrypt plaintext
     public String encrypt(String pass, String key, String iv) throws Exception {
+
+        //Plaintext is converted to a byte array
         byte[] passBytes = pass.getBytes();
+
+        //Key and iv are decoded to get byte array
         byte[] keyBytes = Base64.getDecoder().decode(key);
         byte[] ivBytes = Base64.getDecoder().decode(iv);
+
+        //AES encryption
         SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
         encryptionCipher = Cipher.getInstance("AES/GCM/NoPadding");
         GCMParameterSpec spec = new GCMParameterSpec(length, ivBytes);
         encryptionCipher.init(Cipher.ENCRYPT_MODE, keySpec, spec);
         byte[] encryptedBytes = encryptionCipher.doFinal(passBytes);
+
+        //Encode binary data as a string
         return encode(encryptedBytes);
     }
 
+    //Decrypt ciphertext
     public String decrypt(String encryptedPass, String key, String iv) throws Exception {
+
+        //Decode a Base64-encoded string into a byte array
         byte[] encryptedBytes = decode(encryptedPass);
+
+        //Key and iv are decoded to get byte array
         byte[] keyBytes = Base64.getDecoder().decode(key);
         byte[] ivBytes = Base64.getDecoder().decode(iv);
+
+        //AES decryption
         SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
         decryptionCipher = Cipher.getInstance("AES/GCM/NoPadding");
         GCMParameterSpec spec = new GCMParameterSpec(length, ivBytes);
@@ -52,10 +70,12 @@ public class PasswordEncryption {
         return new String(decryptedBytes);
     }
 
+    //Encode binary data as a string
     private String encode(byte[] data) {
         return Base64.getEncoder().encodeToString(data);
     }
 
+    //Decode a Base64-encoded string into a byte array
     private byte[] decode(String data) {
         return Base64.getDecoder().decode(data);
     }

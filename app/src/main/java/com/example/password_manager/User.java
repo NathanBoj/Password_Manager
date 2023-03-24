@@ -2,7 +2,9 @@ package com.example.password_manager;
 
 public class User {
 
+    //User Default Attributes
     public String Name, email, phone;
+    //Total Passwords user has stored
     public int total;
 
     public User(){

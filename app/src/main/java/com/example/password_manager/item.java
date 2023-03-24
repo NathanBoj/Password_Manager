@@ -4,6 +4,7 @@ public class item {
 
     private String title, password, key, iv;
 
+    //Password Item has following features
     public item(String title, String password, String key, String iv){
         this.title = title;
         this.password = password;

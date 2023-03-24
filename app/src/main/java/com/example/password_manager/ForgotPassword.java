@@ -35,6 +35,7 @@ public class ForgotPassword extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        //Reset Password
         resetUser.setOnClickListener(view1 -> {
             resetPass();
         });
@@ -45,6 +46,7 @@ public class ForgotPassword extends AppCompatActivity {
 
         String email = emailReset.getText().toString().trim();
 
+        //Input Validation
         if (email.isEmpty()) {
             emailReset.setError("Email is required!");
             emailReset.requestFocus();

@@ -60,6 +60,7 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        //Initialize List View
         recyclerView = findViewById(R.id.recyclerView);
         itemsList = new ArrayList<>();
 
@@ -79,6 +80,7 @@ public class HomePage extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
+        //Personal Greeting
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -106,9 +108,9 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+        //Display Items
         // Get a reference to the "data" node
         DatabaseReference dataRef = reference.child(userID).child("data");
-
         //Count the number of children
         dataRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -116,6 +118,7 @@ public class HomePage extends AppCompatActivity {
                 int numChildren = (int) dataSnapshot.getChildrenCount();
 
                 if (numChildren != 0) {
+                    //For every stored password item
                     for (int i = 1; i <= numChildren; i++) {
                         // Get the title and text values from the current child node
                         String title = dataSnapshot.child(String.valueOf(i)).child("title").getValue(String.class);
@@ -129,31 +132,25 @@ public class HomePage extends AppCompatActivity {
                 }
                 setAdapter();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(HomePage.this, "An error has occurred!", Toast.LENGTH_SHORT).show();
             }
         });
 
-
-        //Add item
+        //Add items
         add_password.setOnClickListener(view -> {
             startActivity(new Intent(HomePage.this,PasswordCreator.class));
         });
 
-
     }
 
-
+    //Set the item display
     private void setAdapter() {
         recyclerAdapter adapter = new recyclerAdapter(itemsList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
-
-
     }
-
 }

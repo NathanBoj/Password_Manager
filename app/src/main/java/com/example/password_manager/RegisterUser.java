@@ -28,7 +28,7 @@ public class RegisterUser extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     public FirebaseAuth auth = FirebaseAuth.getInstance();
-    public FirebaseUser userVerify = auth.getCurrentUser();
+    public FirebaseUser userVerify;
 
     @SuppressLint("MissingInflatedId")
 
@@ -149,6 +149,7 @@ public class RegisterUser extends AppCompatActivity {
     //Verify email
     public void verifyuser() {
         //Verify email
+        userVerify = auth.getCurrentUser();
         userVerify.sendEmailVerification()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

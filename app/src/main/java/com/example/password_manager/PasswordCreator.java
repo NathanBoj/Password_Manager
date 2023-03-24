@@ -53,11 +53,10 @@ public class PasswordCreator extends AppCompatActivity {
         password_title = findViewById(R.id.password_title);
         password_input = findViewById(R.id.password_input);
         re_password_input = findViewById(R.id.re_password_input);
-
         encrypt = findViewById(R.id.encrypt);
 
+        //Encrypt it
         encrypt.setOnClickListener(view -> {
-
             String title = password_title.getText().toString().trim();
             String pass = password_input.getText().toString().trim();
             String re_pass = re_password_input.getText().toString().trim();
@@ -68,17 +67,22 @@ public class PasswordCreator extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     int total = dataSnapshot.getValue(Integer.class);
 
+                    //Input Validation
                     if (validate_input(title,pass,re_pass)) {
 
+                        //Increase total passwords for user
                         total += 1;
 
                         try {
+                            //Encrypt Password to Ciphertext
                             passwordEncryption = new PasswordEncryption();
                             String key = passwordEncryption.generateKey();
                             String iv = passwordEncryption.generateIV();
 
+                            //Encrypt using given plaintext, generated key and iv
                             String encryptedPassword = passwordEncryption.encrypt(pass, key, iv);
 
+                            //Upload Title, Ciphertext, Key, IV to database
                             reference.child(userID).child("data").child(Integer.toString(total)).child("title").setValue(title);
                             reference.child(userID).child("data").child(Integer.toString(total)).child("pass").setValue(encryptedPassword);
                             reference.child(userID).child("data").child(Integer.toString(total)).child("key").setValue(key);
@@ -103,10 +107,6 @@ public class PasswordCreator extends AppCompatActivity {
             });
 
         });
-
-
-
-
 
     }
 

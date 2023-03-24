@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Login = findViewById(R.id.loginUser);
         forgotPass = findViewById(R.id.forgotPass);
 
-        //Remove!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //Debug Feature
         debug = findViewById(R.id.debug);
         debug.setOnClickListener(view -> {
             mAuth.signInWithEmailAndPassword("bojczuk.nathan@gmail.com","Abcdefg123!").addOnCompleteListener(task -> {
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //User Login
     private void userLogin() {
         String email = email_log.getText().toString().trim();
         String password = password_log.getText().toString().trim();
