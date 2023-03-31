@@ -49,10 +49,9 @@ We can list all of the system components and provide a brief overview of its fun
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once the input values are valid and it is time to complete the register process, an email verification link is sent to the user’s provided email address, in which they must open and verify. 
 
 ### Reset Page
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/reset.jpg" width=20% height=20%>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The password reset functionality was developed for the users ease of use, however this feature may raise some security concerns when dealing with hackers. Hackers can gain access to users accounts by exploiting this feature if the hacker has access to their main email account. To combat this, we decided to include SMS multi-factor authentication, which significantly adds a layer of security to users accounts.
-
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/reset.jpg" width=20% height=20%>
 
 ### SMS Page
 <img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/sms.jpg" width=20% height=20%>
@@ -77,16 +76,16 @@ We can list all of the system components and provide a brief overview of its fun
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To encrypt the provided passwords, we will use the cipher class in Android Studio. The cipher class provides many different encryption methods to use in your code such as AES and DES. For our Project, we will be encrypting our passwords using AES encryption with a randomly generated 16 bytes key and 12 bytes initialization vector.
 
 ### Updated Home Page
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/create2.jpg" width=20% height=20%>
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/create2.jpg" width=50% height=50%>
 
 ### Register Process Sequence Diagram
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/register_seq.png" width=90% height=90%>
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/register_seq.png" width=50% height=50%>
 
 ### Login Process Sequence Diagram
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login_seq.png" width=90% height=90%>
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login_seq.png" width=50% height=50%>
 
 ### Decryption Process Sequence Diagram
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/decrypt_seq.png" width=90% height=90%>
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/decrypt_seq.png" width=50% height=50%>
 
 ### Encryption Process Sequence Diagram
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/encrypt_seq.png" width=90% height=90%>
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/encrypt_seq.png" width=50% height=50%>
