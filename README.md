@@ -18,7 +18,7 @@ Using your favourite Android device, install the APK [here.](https://github.com/
 We can list all of the system components and provide a brief overview of its functionality:
 - <ins>Firebase Realtime Database:</ins> Helps us store and retrieve user information such as name, email, phone, and more delicate data such as stored passwords. Passwords that are stored in the realtime database are encrypted.
 - <ins>Firebase Authentication:</ins> Takes care of sending authentication emails and SMS verification texts to users.
-- <ins>Register Page:<ins> Registers a new user to our database. Email verification is initially sent and needs to be verified before logging in.  
+- <ins>Register Page:</ins> Registers a new user to our database. Email verification is initially sent and needs to be verified before logging in.  
 - <ins>Forgot Password Page:</ins> Users have the option to reset their password via email.
 - <ins>Login Page:</ins> Signs in an already registered and authenticated user. If provided credentials are valid they are prompted with the SMS verification page.
 - <ins>SMS Verification Page:</ins> Signed in users are required to provide a new SMS code every time they log in. This is to ensure another level of security and authentication while using the app. Firebase Authentication handles the generation and sending of SMS codes.
