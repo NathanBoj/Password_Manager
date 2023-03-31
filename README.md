@@ -12,16 +12,18 @@ Using your favourite Android device, install the APK [here.](https://github.com/
 
 ## Project Methodology Overview
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Password Manager Application requires many pages to showcase its true functionality. The application first starts at the Login Page, and follows a secure process of activities to guarantee the confidentiality, integrity, and authorization of user passwords.
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/system.png" width=20% height=20%>
+
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/system.png" width=90% height=90%>
+
 We can list all of the system components and provide a brief overview of its functionality:
-- Firebase Realtime Database: Helps us store and retrieve user information such as name, email, phone, and more delicate data such as stored passwords. Passwords that are stored in the realtime database are encrypted.
-- <u>Firebase Authentication:<u> Takes care of sending authentication emails and SMS verification texts to users.
-- <u>Register Page:<u> Registers a new user to our database. Email verification is initially sent and needs to be verified before logging in.  
-- <u>Forgot Password Page:<u> Users have the option to reset their password via email.
-- <u>Login Page:<u> Signs in an already registered and authenticated user. If provided credentials are valid they are prompted with the SMS verification page.
-- <u>SMS Verification Page:<u> Signed in users are required to provide a new SMS code every time they log in. This is to ensure another level of security and authentication while using the app. Firebase Authentication handles the generation and sending of SMS codes.
+- <u>Firebase Realtime Database:</u> Helps us store and retrieve user information such as name, email, phone, and more delicate data such as stored passwords. Passwords that are stored in the realtime database are encrypted.
+- <u>Firebase Authentication:</u> Takes care of sending authentication emails and SMS verification texts to users.
+- <u>Register Page:</u> Registers a new user to our database. Email verification is initially sent and needs to be verified before logging in.  
+- <u>Forgot Password Page:</u> Users have the option to reset their password via email.
+- <u>Login Page:</u> Signs in an already registered and authenticated user. If provided credentials are valid they are prompted with the SMS verification page.
+- <u>SMS Verification Page:</u> Signed in users are required to provide a new SMS code every time they log in. This is to ensure another level of security and authentication while using the app. Firebase Authentication handles the generation and sending of SMS codes.
 - <u>Home Page:<u> Users can view previously stored passwords and create new passwords. This activity provides the decryption method so users can select which password they want to use. 
-- <u>Create Password Page:<u> This activity gives the user the ability to create and store new passwords. It features the encryption method so passwords can be safely uploaded to the database. 
+- <u>Create Password Page:</u> This activity gives the user the ability to create and store new passwords. It features the encryption method so passwords can be safely uploaded to the database. 
 
 ### Login Page
 <img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/login.jpg" width=20% height=20%>
