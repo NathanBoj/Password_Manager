@@ -76,7 +76,7 @@ We can list all of the system components and provide a brief overview of its fun
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To encrypt the provided passwords, we will use the cipher class in Android Studio. The cipher class provides many different encryption methods to use in your code such as AES and DES. For our Project, we will be encrypting our passwords using AES encryption with a randomly generated 16 bytes key and 12 bytes initialization vector.
 
 ### Updated Home Page
-<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/create2.jpg" width=50% height=50%>
+<img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/create2.jpg" width=20% height=20%>
 
 ### Register Process Sequence Diagram
 <img src= "https://github.com/NathanBoj/Password_Manager/blob/main/screenshots/register_seq.png" width=50% height=50%>
