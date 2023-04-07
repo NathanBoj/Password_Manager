@@ -3,7 +3,7 @@
 
 ## How to install:
 Using your favourite Android device, install the APK [here.](https://github.com/NathanBoj/Password_Manager/tree/main/app/release)
-(must allow installations from uknown sources)
+(must allow installations from unknown sources)
 
 ## Functionality
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With the growing number of online sites and services which all require you to have complex passwords, it can be tough to remember and keep track of so many different combinations. This project is aimed at creating a secure and user-friendly mobile application that will allow users to store their passwords and sensitive information in an encrypted format. The app will utilize strong encryption algorithms to ensure confidentiality, integrity, and authorization of user passwords, alongside removing the stress that comes with entering passwords.  
